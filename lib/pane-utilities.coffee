@@ -10,9 +10,12 @@ module.exports = class PaneUtilities
 
         return PaneUtilities
 
-    @saveItems = ->
+    @saveActiveItem = ->
         _sCurrentActiveURI = atom.workspace.getActivePaneItem()?.getUri()
 
+        return PaneUtilities
+
+    @saveItems = ->
         oFirstPane = ( aPanes = _getCurrentPanes() )[ 0 ]
 
         for oPane, iPaneIndex in aPanes
@@ -21,6 +24,14 @@ module.exports = class PaneUtilities
                 if iPaneIndex > 0
                     iItemsLength = oFirstPane.getItems().length
                     oPane.moveItemToPane oItem, oFirstPane, iItemsLength
+
+        return PaneUtilities
+
+    @restoreActiveItem = ->
+        if _sCurrentActiveURI
+            ( oActivePane = atom.workspace.paneForUri _sCurrentActiveURI ).activate()
+            oActivePane.activateItemForUri _sCurrentActiveURI
+            _sCurrentActiveURI = null
 
         return PaneUtilities
 
@@ -33,10 +44,7 @@ module.exports = class PaneUtilities
                 iItemsLength = oTargetPane.getItems().length
                 oFirstPane.moveItemToPane oItem, oTargetPane, iItemsLength
 
-        if _sCurrentActiveURI
-            ( oActivePane = atom.workspace.paneForUri _sCurrentActiveURI ).activate()
-            oActivePane.activateItemForUri _sCurrentActiveURI
-            _sCurrentActiveURI = null
+        return PaneUtilities
 
         return PaneUtilities
 

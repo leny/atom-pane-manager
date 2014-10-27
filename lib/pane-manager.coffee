@@ -66,7 +66,9 @@ module.exports =
         unless aLayoutConfig = atom.config.get "pane-manager.#{ sLayout }"
             return console.error "Unknown layout '#{ sLayout }'!"
         PaneUtils
+            .saveActiveItem()
             .saveItems()
             .clearPanes()
             .applyLayout aLayoutConfig
             .restoreItems()
+            .restoreActiveItem()
