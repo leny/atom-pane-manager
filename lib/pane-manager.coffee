@@ -62,6 +62,18 @@ module.exports =
         atom.workspaceView.command "pane-manager:changeLayoutNine", => @changeLayout "layout9"
         atom.workspaceView.command "pane-manager:changeLayoutTen", => @changeLayout "layout10"
 
+        # Move to pane commands
+        atom.workspaceView.command "pane-manager:moveToPaneOne", => @moveToPane 1
+        atom.workspaceView.command "pane-manager:moveToPaneTwo", => @moveToPane 2
+        atom.workspaceView.command "pane-manager:moveToPaneThree", => @moveToPane 3
+        atom.workspaceView.command "pane-manager:moveToPaneFour", => @moveToPane 4
+        atom.workspaceView.command "pane-manager:moveToPaneFive", => @moveToPane 5
+        atom.workspaceView.command "pane-manager:moveToPaneSix", => @moveToPane 6
+        atom.workspaceView.command "pane-manager:moveToPaneSeven", => @moveToPane 7
+        atom.workspaceView.command "pane-manager:moveToPaneEight", => @moveToPane 8
+        atom.workspaceView.command "pane-manager:moveToPaneNine", => @moveToPane 9
+        atom.workspaceView.command "pane-manager:moveToPaneTen", => @moveToPane 10
+
     changeLayout: ( sLayout ) ->
         unless aLayoutConfig = atom.config.get "pane-manager.#{ sLayout }"
             return console.error "Unknown layout '#{ sLayout }'!"
@@ -71,4 +83,10 @@ module.exports =
             .clearPanes()
             .applyLayout aLayoutConfig
             .restoreItems()
+            .restoreActiveItem()
+
+    moveToPane: ( iTargetPaneIndex = 1 ) ->
+        PaneUtils
+            .saveActiveItem()
+            .moveItemTo ( iTargetPaneIndex - 1 )
             .restoreActiveItem()

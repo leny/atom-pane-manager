@@ -13,7 +13,17 @@
     "pane-manager:changeLayoutSeven",
     "pane-manager:changeLayoutEight",
     "pane-manager:changeLayoutNine",
-    "pane-manager:changeLayoutTen"
+    "pane-manager:changeLayoutTen",
+    "pane-manager:moveToPaneOne",
+    "pane-manager:moveToPaneTwo",
+    "pane-manager:moveToPaneThree",
+    "pane-manager:moveToPaneFour",
+    "pane-manager:moveToPaneFive",
+    "pane-manager:moveToPaneSix",
+    "pane-manager:moveToPaneSeven",
+    "pane-manager:moveToPaneEight",
+    "pane-manager:moveToPaneNine",
+    "pane-manager:moveToPaneTen"
   ],
   "repository": "https://github.com/leny/atom-pane-manager",
   "license": "MIT",

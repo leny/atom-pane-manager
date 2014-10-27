@@ -46,6 +46,13 @@ module.exports = class PaneUtilities
 
         return PaneUtilities
 
+    @moveItemTo = ( iTargetPaneIndex ) ->
+        oTargetPane = ( aPanes = _getCurrentPanes() )[ iTargetPaneIndex ] ? aPanes[ aPanes.length - 1 ]
+        iItemsLength = oTargetPane.getItems().length
+
+        ( oCurrentPane = atom.workspace.getActivePane() )
+            .moveItemToPane oCurrentPane.getActiveItem(), oTargetPane, iItemsLength
+
         return PaneUtilities
 
     @applyLayout = ( aLayout ) ->
