@@ -16,9 +16,9 @@ module.exports = class PaneUtilities
         return PaneUtilities
 
     @saveItems = ->
-        oFirstPane = ( aPanes = _getCurrentPanes() )[ 0 ]
+        oFirstPane = _getPaneAt 0
 
-        for oPane, iPaneIndex in aPanes
+        for oPane, iPaneIndex in _getCurrentPanes()
             for oItem in oPane.getItems()
                 oItem.originalPaneIndex = iPaneIndex
                 if iPaneIndex > 0
@@ -39,7 +39,7 @@ module.exports = class PaneUtilities
         oFirstPane = ( aPanes = _getCurrentPanes() )[ 0 ]
 
         for oItem in oFirstPane.getItems()
-            oTargetPane = aPanes[ oItem.originalPaneIndex ] ? aPanes[ aPanes.length - 1 ]
+            oTargetPane = _getPaneAt oItem.originalPaneIndex
             if oItem.originalPaneIndex > 0
                 iItemsLength = oTargetPane.getItems().length
                 oFirstPane.moveItemToPane oItem, oTargetPane, iItemsLength
@@ -47,7 +47,7 @@ module.exports = class PaneUtilities
         return PaneUtilities
 
     @moveItemTo = ( iTargetPaneIndex ) ->
-        oTargetPane = ( aPanes = _getCurrentPanes() )[ iTargetPaneIndex ] ? aPanes[ aPanes.length - 1 ]
+        oTargetPane = _getPaneAt iTargetPaneIndex
         iItemsLength = oTargetPane.getItems().length
 
         ( oCurrentPane = atom.workspace.getActivePane() )
@@ -72,3 +72,6 @@ module.exports = class PaneUtilities
 
     _getCurrentPanes = ->
         ( oPane for oPane in atom.workspaceView.getPaneViews() )
+
+    _getPaneAt = ( iPaneIndex ) ->
+        ( aPanes = _getCurrentPanes() )[ iPaneIndex ] ? aPanes[ aPanes.length - 1 ]
