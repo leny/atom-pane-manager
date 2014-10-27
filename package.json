@@ -1,0 +1,13 @@
+{
+  "name": "pane-manager",
+  "main": "./lib/pane-manager",
+  "version": "0.0.0",
+  "description": "Set your panes layout, move your files between them, and other useful pane-related stuffs.",
+  "activationEvents": [],
+  "repository": "https://github.com/leny/atom-pane-manager",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.138.0"
+  },
+  "dependencies": {}
+}
