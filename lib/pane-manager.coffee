@@ -1,3 +1,5 @@
+PaneUtils = require "./pane-utilities.coffee"
+
 _aConfigArrayItems =
     type: "integer"
     minimum: 1
@@ -48,4 +50,23 @@ module.exports =
             items: _aConfigArrayItems
 
     activate: ->
-        console.log "do magic things here"
+        # Layout interactions commands
+        atom.workspaceView.command "pane-manager:changeLayoutOne", => @changeLayout "layout1"
+        atom.workspaceView.command "pane-manager:changeLayoutTwo", => @changeLayout "layout2"
+        atom.workspaceView.command "pane-manager:changeLayoutThree", => @changeLayout "layout3"
+        atom.workspaceView.command "pane-manager:changeLayoutFour", => @changeLayout "layout4"
+        atom.workspaceView.command "pane-manager:changeLayoutFive", => @changeLayout "layout5"
+        atom.workspaceView.command "pane-manager:changeLayoutSix", => @changeLayout "layout6"
+        atom.workspaceView.command "pane-manager:changeLayoutSeven", => @changeLayout "layout7"
+        atom.workspaceView.command "pane-manager:changeLayoutEight", => @changeLayout "layout8"
+        atom.workspaceView.command "pane-manager:changeLayoutNine", => @changeLayout "layout9"
+        atom.workspaceView.command "pane-manager:changeLayoutTen", => @changeLayout "layout10"
+
+    changeLayout: ( sLayout ) ->
+        unless aLayoutConfig = atom.config.get "pane-manager.#{ sLayout }"
+            return console.error "Unknown layout '#{ sLayout }'!"
+        PaneUtils
+            .saveItems()
+            .clearPanes()
+            .applyLayout aLayoutConfig
+            .restoreItems()

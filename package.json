@@ -3,7 +3,18 @@
   "main": "./lib/pane-manager",
   "version": "0.0.0",
   "description": "Set your panes layout, move your files between them, and other useful pane-related stuffs.",
-  "activationEvents": [],
+  "activationEvents": [
+    "pane-manager:changeLayoutOne",
+    "pane-manager:changeLayoutTwo",
+    "pane-manager:changeLayoutThree",
+    "pane-manager:changeLayoutFour",
+    "pane-manager:changeLayoutFive",
+    "pane-manager:changeLayoutSix",
+    "pane-manager:changeLayoutSeven",
+    "pane-manager:changeLayoutEight",
+    "pane-manager:changeLayoutNine",
+    "pane-manager:changeLayoutTen"
+  ],
   "repository": "https://github.com/leny/atom-pane-manager",
   "license": "MIT",
   "engines": {
