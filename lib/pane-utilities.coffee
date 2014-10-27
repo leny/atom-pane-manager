@@ -55,6 +55,11 @@ module.exports = class PaneUtilities
 
         return PaneUtilities
 
+    @focusPane = ( iTargetPaneIndex ) ->
+        _getPaneAt( iTargetPaneIndex ).activate()
+
+        return PaneUtilities
+
     @applyLayout = ( aLayout ) ->
         oPanes = _getCurrentPanes()
 

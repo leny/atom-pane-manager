@@ -74,6 +74,18 @@ module.exports =
         atom.workspaceView.command "pane-manager:moveToPaneNine", => @moveToPane 9
         atom.workspaceView.command "pane-manager:moveToPaneTen", => @moveToPane 10
 
+        # Focus to pane commands
+        atom.workspaceView.command "pane-manager:focusToPaneOne", => @focusToPane 1
+        atom.workspaceView.command "pane-manager:focusToPaneTwo", => @focusToPane 2
+        atom.workspaceView.command "pane-manager:focusToPaneThree", => @focusToPane 3
+        atom.workspaceView.command "pane-manager:focusToPaneFour", => @focusToPane 4
+        atom.workspaceView.command "pane-manager:focusToPaneFive", => @focusToPane 5
+        atom.workspaceView.command "pane-manager:focusToPaneSix", => @focusToPane 6
+        atom.workspaceView.command "pane-manager:focusToPaneSeven", => @focusToPane 7
+        atom.workspaceView.command "pane-manager:focusToPaneEight", => @focusToPane 8
+        atom.workspaceView.command "pane-manager:focusToPaneNine", => @focusToPane 9
+        atom.workspaceView.command "pane-manager:focusToPaneTen", => @focusToPane 10
+
     changeLayout: ( sLayout ) ->
         unless aLayoutConfig = atom.config.get "pane-manager.#{ sLayout }"
             return console.error "Unknown layout '#{ sLayout }'!"
@@ -90,3 +102,7 @@ module.exports =
             .saveActiveItem()
             .moveItemTo ( iTargetPaneIndex - 1 )
             .restoreActiveItem()
+
+    focusToPane: ( iTargetPaneIndex = 1 ) ->
+        PaneUtils
+            .focusPane ( iTargetPaneIndex - 1 )

@@ -23,7 +23,17 @@
     "pane-manager:moveToPaneSeven",
     "pane-manager:moveToPaneEight",
     "pane-manager:moveToPaneNine",
-    "pane-manager:moveToPaneTen"
+    "pane-manager:moveToPaneTen",
+    "pane-manager:focusToPaneOne",
+    "pane-manager:focusToPaneTwo",
+    "pane-manager:focusToPaneThree",
+    "pane-manager:focusToPaneFour",
+    "pane-manager:focusToPaneFive",
+    "pane-manager:focusToPaneSix",
+    "pane-manager:focusToPaneSeven",
+    "pane-manager:focusToPaneEight",
+    "pane-manager:focusToPaneNine",
+    "pane-manager:focusToPaneTen"
   ],
   "repository": "https://github.com/leny/atom-pane-manager",
   "license": "MIT",
