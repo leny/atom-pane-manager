@@ -22,3 +22,28 @@
   'cmd-k cmd-l cmd-8': 'pane-manager:changeLayoutEight'
   'cmd-k cmd-l cmd-9': 'pane-manager:changeLayoutNine'
   'cmd-k cmd-l cmd-0': 'pane-manager:changeLayoutTen'
+
+# Move to pane
+'.platform-linux .workspace, .platform-win32 .workspace':
+  'ctrl-k ctrl-m ctrl-1': 'pane-manager:moveToPaneOne'
+  'ctrl-k ctrl-m ctrl-2': 'pane-manager:moveToPaneTwo'
+  'ctrl-k ctrl-m ctrl-3': 'pane-manager:moveToPaneThree'
+  'ctrl-k ctrl-m ctrl-4': 'pane-manager:moveToPaneFour'
+  'ctrl-k ctrl-m ctrl-5': 'pane-manager:moveToPaneFive'
+  'ctrl-k ctrl-m ctrl-6': 'pane-manager:moveToPaneSix'
+  'ctrl-k ctrl-m ctrl-7': 'pane-manager:moveToPaneSeven'
+  'ctrl-k ctrl-m ctrl-8': 'pane-manager:moveToPaneEight'
+  'ctrl-k ctrl-m ctrl-9': 'pane-manager:moveToPaneNine'
+  'ctrl-k ctrl-m ctrl-0': 'pane-manager:moveToPaneTen'
+
+'.platform-darwin .workspace':
+  'cmd-k cmd-m cmd-1': 'pane-manager:moveToPaneOne'
+  'cmd-k cmd-m cmd-2': 'pane-manager:moveToPaneTwo'
+  'cmd-k cmd-m cmd-3': 'pane-manager:moveToPaneThree'
+  'cmd-k cmd-m cmd-4': 'pane-manager:moveToPaneFour'
+  'cmd-k cmd-m cmd-5': 'pane-manager:moveToPaneFive'
+  'cmd-k cmd-m cmd-6': 'pane-manager:moveToPaneSix'
+  'cmd-k cmd-m cmd-7': 'pane-manager:moveToPaneSeven'
+  'cmd-k cmd-m cmd-8': 'pane-manager:moveToPaneEight'
+  'cmd-k cmd-m cmd-9': 'pane-manager:moveToPaneNine'
+  'cmd-k cmd-m cmd-0': 'pane-manager:moveToPaneTen'
