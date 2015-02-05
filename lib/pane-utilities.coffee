@@ -6,12 +6,12 @@ module.exports = class PaneUtilities
 
     @clearPanes = ->
         while ( aPanes = _getCurrentPanes() ).length > 1
-            aPanes[ aPanes.length - 1 ].remove()
+            aPanes[ aPanes.length - 1 ].destroy()
 
         return PaneUtilities
 
     @saveActiveItem = ->
-        _sCurrentActiveURI = atom.workspace.getActivePaneItem()?.getUri()
+        _sCurrentActiveURI = atom.workspace.getActivePaneItem()?.getUri?()
 
         return PaneUtilities
 
@@ -76,7 +76,7 @@ module.exports = class PaneUtilities
         return PaneUtilities
 
     _getCurrentPanes = ->
-        ( oPane for oPane in atom.workspaceView.getPaneViews() )
+        ( oPane for oPane in atom.workspace.getPanes() )
 
     _getPaneAt = ( iPaneIndex ) ->
         ( aPanes = _getCurrentPanes() )[ iPaneIndex ] ? aPanes[ aPanes.length - 1 ]
