@@ -1,5 +1,5 @@
-# Layout management
 '.platform-linux atom-workspace, .platform-win32 atom-workspace':
+  # Layout management
   'ctrl-k ctrl-l ctrl-1': 'pane-manager:changeLayoutOne'
   'ctrl-k ctrl-l ctrl-2': 'pane-manager:changeLayoutTwo'
   'ctrl-k ctrl-l ctrl-3': 'pane-manager:changeLayoutThree'
@@ -10,21 +10,7 @@
   'ctrl-k ctrl-l ctrl-8': 'pane-manager:changeLayoutEight'
   'ctrl-k ctrl-l ctrl-9': 'pane-manager:changeLayoutNine'
   'ctrl-k ctrl-l ctrl-0': 'pane-manager:changeLayoutTen'
-
-'.platform-darwin atom-workspace':
-  'cmd-k cmd-l cmd-1': 'pane-manager:changeLayoutOne'
-  'cmd-k cmd-l cmd-2': 'pane-manager:changeLayoutTwo'
-  'cmd-k cmd-l cmd-3': 'pane-manager:changeLayoutThree'
-  'cmd-k cmd-l cmd-4': 'pane-manager:changeLayoutFour'
-  'cmd-k cmd-l cmd-5': 'pane-manager:changeLayoutFive'
-  'cmd-k cmd-l cmd-6': 'pane-manager:changeLayoutSix'
-  'cmd-k cmd-l cmd-7': 'pane-manager:changeLayoutSeven'
-  'cmd-k cmd-l cmd-8': 'pane-manager:changeLayoutEight'
-  'cmd-k cmd-l cmd-9': 'pane-manager:changeLayoutNine'
-  'cmd-k cmd-l cmd-0': 'pane-manager:changeLayoutTen'
-
-# Move to pane
-'.platform-linux atom-workspace, .platform-win32 atom-workspace':
+  # Move to pane
   'ctrl-k ctrl-m ctrl-1': 'pane-manager:moveToPaneOne'
   'ctrl-k ctrl-m ctrl-2': 'pane-manager:moveToPaneTwo'
   'ctrl-k ctrl-m ctrl-3': 'pane-manager:moveToPaneThree'
@@ -35,21 +21,7 @@
   'ctrl-k ctrl-m ctrl-8': 'pane-manager:moveToPaneEight'
   'ctrl-k ctrl-m ctrl-9': 'pane-manager:moveToPaneNine'
   'ctrl-k ctrl-m ctrl-0': 'pane-manager:moveToPaneTen'
-
-'.platform-darwin atom-workspace':
-  'cmd-k cmd-m cmd-1': 'pane-manager:moveToPaneOne'
-  'cmd-k cmd-m cmd-2': 'pane-manager:moveToPaneTwo'
-  'cmd-k cmd-m cmd-3': 'pane-manager:moveToPaneThree'
-  'cmd-k cmd-m cmd-4': 'pane-manager:moveToPaneFour'
-  'cmd-k cmd-m cmd-5': 'pane-manager:moveToPaneFive'
-  'cmd-k cmd-m cmd-6': 'pane-manager:moveToPaneSix'
-  'cmd-k cmd-m cmd-7': 'pane-manager:moveToPaneSeven'
-  'cmd-k cmd-m cmd-8': 'pane-manager:moveToPaneEight'
-  'cmd-k cmd-m cmd-9': 'pane-manager:moveToPaneNine'
-  'cmd-k cmd-m cmd-0': 'pane-manager:moveToPaneTen'
-
-# Focus to pane
-'.platform-linux atom-workspace, .platform-win32 atom-workspace':
+  # Focus to pane
   'ctrl-k ctrl-f ctrl-1': 'pane-manager:focusToPaneOne'
   'ctrl-k ctrl-f ctrl-2': 'pane-manager:focusToPaneTwo'
   'ctrl-k ctrl-f ctrl-3': 'pane-manager:focusToPaneThree'
@@ -62,6 +34,29 @@
   'ctrl-k ctrl-f ctrl-0': 'pane-manager:focusToPaneTen'
 
 '.platform-darwin atom-workspace':
+  # Layout management
+  'cmd-k cmd-l cmd-1': 'pane-manager:changeLayoutOne'
+  'cmd-k cmd-l cmd-2': 'pane-manager:changeLayoutTwo'
+  'cmd-k cmd-l cmd-3': 'pane-manager:changeLayoutThree'
+  'cmd-k cmd-l cmd-4': 'pane-manager:changeLayoutFour'
+  'cmd-k cmd-l cmd-5': 'pane-manager:changeLayoutFive'
+  'cmd-k cmd-l cmd-6': 'pane-manager:changeLayoutSix'
+  'cmd-k cmd-l cmd-7': 'pane-manager:changeLayoutSeven'
+  'cmd-k cmd-l cmd-8': 'pane-manager:changeLayoutEight'
+  'cmd-k cmd-l cmd-9': 'pane-manager:changeLayoutNine'
+  'cmd-k cmd-l cmd-0': 'pane-manager:changeLayoutTen'
+  # Move to pane
+  'cmd-k cmd-m cmd-1': 'pane-manager:moveToPaneOne'
+  'cmd-k cmd-m cmd-2': 'pane-manager:moveToPaneTwo'
+  'cmd-k cmd-m cmd-3': 'pane-manager:moveToPaneThree'
+  'cmd-k cmd-m cmd-4': 'pane-manager:moveToPaneFour'
+  'cmd-k cmd-m cmd-5': 'pane-manager:moveToPaneFive'
+  'cmd-k cmd-m cmd-6': 'pane-manager:moveToPaneSix'
+  'cmd-k cmd-m cmd-7': 'pane-manager:moveToPaneSeven'
+  'cmd-k cmd-m cmd-8': 'pane-manager:moveToPaneEight'
+  'cmd-k cmd-m cmd-9': 'pane-manager:moveToPaneNine'
+  'cmd-k cmd-m cmd-0': 'pane-manager:moveToPaneTen'
+  # Focus to pane
   'cmd-k cmd-f cmd-1': 'pane-manager:focusToPaneOne'
   'cmd-k cmd-f cmd-2': 'pane-manager:focusToPaneTwo'
   'cmd-k cmd-f cmd-3': 'pane-manager:focusToPaneThree'
