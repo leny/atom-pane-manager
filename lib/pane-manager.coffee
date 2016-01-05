@@ -8,83 +8,83 @@ _aConfigArrayItems =
 module.exports =
     # Configuration settings
     config:
-        layout1:
+        layoutOne:
             type: "array"
             default: [ 1 ]
             items: _aConfigArrayItems
-        layout2:
+        layoutTwo:
             type: "array"
             default: [ 1, 1 ]
             items: _aConfigArrayItems
-        layout3:
+        layoutThree:
             type: "array"
             default: [ 1, 1, 1 ]
             items: _aConfigArrayItems
-        layout4:
+        layoutFour:
             type: "array"
             default: [ 1, 1, 1, 1 ]
             items: _aConfigArrayItems
-        layout5:
+        layoutFive:
             type: "array"
             default: [ 2, 2 ]
             items: _aConfigArrayItems
-        layout6:
+        layoutSix:
             type: "array"
             default: [ 2, 2, 2 ]
             items: _aConfigArrayItems
-        layout7:
+        layoutSeven:
             type: "array"
             default: [ 1, 2 ]
             items: _aConfigArrayItems
-        layout8:
+        layoutEight:
             type: "array"
             default: [ 2, 1 ]
             items: _aConfigArrayItems
-        layout9:
+        layoutNine:
             type: "array"
             default: [ 1, 1, 2 ]
             items: _aConfigArrayItems
-        layout10:
+        layoutTen:
             type: "array"
             default: [ 1, 2, 2 ]
             items: _aConfigArrayItems
 
     activate: ->
         # Layout interactions commands
-        atom.commands.add "atom-workspace", "pane-manager:changeLayoutOne", => @changeLayout "layout1"
-        atom.commands.add "atom-workspace", "pane-manager:changeLayoutTwo", => @changeLayout "layout2"
-        atom.commands.add "atom-workspace", "pane-manager:changeLayoutThree", => @changeLayout "layout3"
-        atom.commands.add "atom-workspace", "pane-manager:changeLayoutFour", => @changeLayout "layout4"
-        atom.commands.add "atom-workspace", "pane-manager:changeLayoutFive", => @changeLayout "layout5"
-        atom.commands.add "atom-workspace", "pane-manager:changeLayoutSix", => @changeLayout "layout6"
-        atom.commands.add "atom-workspace", "pane-manager:changeLayoutSeven", => @changeLayout "layout7"
-        atom.commands.add "atom-workspace", "pane-manager:changeLayoutEight", => @changeLayout "layout8"
-        atom.commands.add "atom-workspace", "pane-manager:changeLayoutNine", => @changeLayout "layout9"
-        atom.commands.add "atom-workspace", "pane-manager:changeLayoutTen", => @changeLayout "layout10"
+        atom.commands.add "atom-workspace", "pane-manager:change-layout-one", => @changeLayout "layoutOne"
+        atom.commands.add "atom-workspace", "pane-manager:change-layout-two", => @changeLayout "layoutTwo"
+        atom.commands.add "atom-workspace", "pane-manager:change-layout-three", => @changeLayout "layoutThree"
+        atom.commands.add "atom-workspace", "pane-manager:change-layout-four", => @changeLayout "layoutFour"
+        atom.commands.add "atom-workspace", "pane-manager:change-layout-five", => @changeLayout "layoutFive"
+        atom.commands.add "atom-workspace", "pane-manager:change-layout-six", => @changeLayout "layout6"
+        atom.commands.add "atom-workspace", "pane-manager:change-layout-seven", => @changeLayout "layout7"
+        atom.commands.add "atom-workspace", "pane-manager:change-layout-eight", => @changeLayout "layout8"
+        atom.commands.add "atom-workspace", "pane-manager:change-layout-nine", => @changeLayout "layout9"
+        atom.commands.add "atom-workspace", "pane-manager:change-layout-ten", => @changeLayout "layoutTen"
 
         # Move to pane commands
-        atom.commands.add "atom-workspace", "pane-manager:moveToPaneOne", => @moveToPane 1
-        atom.commands.add "atom-workspace", "pane-manager:moveToPaneTwo", => @moveToPane 2
-        atom.commands.add "atom-workspace", "pane-manager:moveToPaneThree", => @moveToPane 3
-        atom.commands.add "atom-workspace", "pane-manager:moveToPaneFour", => @moveToPane 4
-        atom.commands.add "atom-workspace", "pane-manager:moveToPaneFive", => @moveToPane 5
-        atom.commands.add "atom-workspace", "pane-manager:moveToPaneSix", => @moveToPane 6
-        atom.commands.add "atom-workspace", "pane-manager:moveToPaneSeven", => @moveToPane 7
-        atom.commands.add "atom-workspace", "pane-manager:moveToPaneEight", => @moveToPane 8
-        atom.commands.add "atom-workspace", "pane-manager:moveToPaneNine", => @moveToPane 9
-        atom.commands.add "atom-workspace", "pane-manager:moveToPaneTen", => @moveToPane 10
+        atom.commands.add "atom-workspace", "pane-manager:move-to-pane-one", => @moveToPane 1
+        atom.commands.add "atom-workspace", "pane-manager:move-to-pane-two", => @moveToPane 2
+        atom.commands.add "atom-workspace", "pane-manager:move-to-pane-three", => @moveToPane 3
+        atom.commands.add "atom-workspace", "pane-manager:move-to-pane-four", => @moveToPane 4
+        atom.commands.add "atom-workspace", "pane-manager:move-to-pane-five", => @moveToPane 5
+        atom.commands.add "atom-workspace", "pane-manager:move-to-pane-six", => @moveToPane 6
+        atom.commands.add "atom-workspace", "pane-manager:move-to-pane-seven", => @moveToPane 7
+        atom.commands.add "atom-workspace", "pane-manager:move-to-pane-eight", => @moveToPane 8
+        atom.commands.add "atom-workspace", "pane-manager:move-to-pane-nine", => @moveToPane 9
+        atom.commands.add "atom-workspace", "pane-manager:move-to-pane-ten", => @moveToPane 10
 
         # Focus to pane commands
-        atom.commands.add "atom-workspace", "pane-manager:focusToPaneOne", => @focusToPane 1
-        atom.commands.add "atom-workspace", "pane-manager:focusToPaneTwo", => @focusToPane 2
-        atom.commands.add "atom-workspace", "pane-manager:focusToPaneThree", => @focusToPane 3
-        atom.commands.add "atom-workspace", "pane-manager:focusToPaneFour", => @focusToPane 4
-        atom.commands.add "atom-workspace", "pane-manager:focusToPaneFive", => @focusToPane 5
-        atom.commands.add "atom-workspace", "pane-manager:focusToPaneSix", => @focusToPane 6
-        atom.commands.add "atom-workspace", "pane-manager:focusToPaneSeven", => @focusToPane 7
-        atom.commands.add "atom-workspace", "pane-manager:focusToPaneEight", => @focusToPane 8
-        atom.commands.add "atom-workspace", "pane-manager:focusToPaneNine", => @focusToPane 9
-        atom.commands.add "atom-workspace", "pane-manager:focusToPaneTen", => @focusToPane 10
+        atom.commands.add "atom-workspace", "pane-manager:focus-to-pane-one", => @focusToPane 1
+        atom.commands.add "atom-workspace", "pane-manager:focus-to-pane-two", => @focusToPane 2
+        atom.commands.add "atom-workspace", "pane-manager:focus-to-pane-three", => @focusToPane 3
+        atom.commands.add "atom-workspace", "pane-manager:focus-to-pane-four", => @focusToPane 4
+        atom.commands.add "atom-workspace", "pane-manager:focus-to-pane-five", => @focusToPane 5
+        atom.commands.add "atom-workspace", "pane-manager:focus-to-pane-six", => @focusToPane 6
+        atom.commands.add "atom-workspace", "pane-manager:focus-to-pane-seven", => @focusToPane 7
+        atom.commands.add "atom-workspace", "pane-manager:focus-to-pane-eight", => @focusToPane 8
+        atom.commands.add "atom-workspace", "pane-manager:focus-to-pane-nine", => @focusToPane 9
+        atom.commands.add "atom-workspace", "pane-manager:focus-to-pane-ten", => @focusToPane 10
 
     changeLayout: ( sLayout ) ->
         unless aLayoutConfig = atom.config.get "pane-manager.#{ sLayout }"

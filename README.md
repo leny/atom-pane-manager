@@ -4,37 +4,37 @@
 
 * * *
 
+## Keybindings
+
+With the success of Atom, it's really difficult to choose keybindings that will not enter in conflict whit anyone else's packages, so I have removed the default keystrokes and let the keymap empty to let you set your own keybindings.
+
+See [keymaps/pane-manager.cson](https://github.com/leny/atom-pane-manager/blob/master/keymaps/pane-manager.cson) for suggestions.
+
 ## Features
 
-### Change pane layout
+### Change pane layouts
 
-Using the following sequencies, you can change your pane layout :
+Use commands `pane-manager:change-layout-[number]` to switch between layouts (`[number]` can be one of the following : `one`, `two`, `three`, `four`, `five`, `six`, `seven`, `eight`, `nine`, `ten`).
 
-* `cmd-k cmd-l cmd-1`: `[ 1 ]` (one column, one row)
-* `cmd-k cmd-l cmd-2`: `[ 1, 1 ]` (two columns, one row)
-* `cmd-k cmd-l cmd-3`: `[ 1, 1, 1 ]` (three columns, one row)
-* `cmd-k cmd-l cmd-4`: `[ 1, 1, 1, 1 ]` (four columns, one row)
-* `cmd-k cmd-l cmd-5`: `[ 2, 2 ]` (two columns, two rows)
-* `cmd-k cmd-l cmd-6`: `[ 2, 2, 2 ]` (three columns, two rows)
-* `cmd-k cmd-l cmd-7`: `[ 1, 2 ]` (two columns, last one splitted in two rows)
-* `cmd-k cmd-l cmd-8`: `[ 1, 2 ]` (two columns, first one splitted in two rows)
-* `cmd-k cmd-l cmd-9`: `[ 1, 1, 2 ]` (three columns, last one splitted in two rows)
-* `cmd-k cmd-l cmd-0`: `[ 1, 2, 2 ]` (three columns, last two splitted in two rows)
+#### Customize layouts
 
-**Note:** on linux/windows, replace `cmd` by `ctrl`.
+Using the following config parameters, you can customize your pane layouts (following are defaults).
 
-### Move a tab to another pane
-
-Use `cmd-k cmd-m cmd-[number]` (or `ctrl-k ctrl-m ctrl-[number]` on linux/windows) to move the active tab to another pane.
-
-**number** is a number between `1` and `0`, **0** representing **ten**.
+* `layoutOne`: `[ 1 ]` (one column, one row)
+* `layoutTwo`: `[ 1, 1 ]` (two columns, one row)
+* `layoutThree`: `[ 1, 1, 1 ]` (three columns, one row)
+* `layoutFour`: `[ 1, 1, 1, 1 ]` (four columns, one row)
+* `layoutFive`: `[ 2, 2 ]` (two columns, two rows)
+* `layoutSix`: `[ 2, 2, 2 ]` (three columns, two rows)
+* `layoutSeven`: `[ 1, 2 ]` (two columns, last one splitted in two rows)
+* `layoutEight`: `[ 1, 2 ]` (two columns, first one splitted in two rows)
+* `layoutNine`: `[ 1, 1, 2 ]` (three columns, last one splitted in two rows)
+* `layoutTen`: `[ 1, 2, 2 ]` (three columns, last two splitted in two rows)
 
 ### Give the focus to another pane
 
-Use `cmd-k cmd-f cmd-[number]` (or `ctrl-k ctrl-f ctrl-[number]` on linux/windows) to give the focus to another pane.
+Use commands `pane-manager:focus-to-pane-[number]` to change the focus to target pane (`[number]` can be one of the following : `one`, `two`, `three`, `four`, `five`, `six`, `seven`, `eight`, `nine`, `ten`).
 
-**number** is a number between `1` and `0`, **0** representing **ten**.
+### Move a tab to another pane
 
-## TODO
-
-- [ ] Allowing to configure the layouts in the package settings
+Use commands `pane-manager:move-to-pane-[number]` to move current tab to target pane (`[number]` can be one of the following : `one`, `two`, `three`, `four`, `five`, `six`, `seven`, `eight`, `nine`, `ten`).
