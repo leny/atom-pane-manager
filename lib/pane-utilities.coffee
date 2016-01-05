@@ -49,9 +49,16 @@ module.exports = class PaneUtilities
     @moveItemTo = ( iTargetPaneIndex ) ->
         oTargetPane = _getPaneAt iTargetPaneIndex
         iItemsLength = oTargetPane.getItems().length
+        oCurrentPane = atom.workspace.getActivePane()
+        oActiveItem = oCurrentPane.getActiveItem()
 
-        ( oCurrentPane = atom.workspace.getActivePane() )
-            .moveItemToPane oCurrentPane.getActiveItem(), oTargetPane, iItemsLength
+        # Check if the action can be performed
+        if oActiveItem?
+            # Move active item
+            oCurrentPane.moveItemToPane oActiveItem, oTargetPane, iItemsLength
+            # Re-activate the item moved (SublimeText-like behaviour)
+            oTargetPane.activate()
+            oTargetPane.activateItem oActiveItem
 
         return PaneUtilities
 
