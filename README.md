@@ -4,6 +4,12 @@
 
 * * *
 
+## WARNING: breaking changes in `1.0`!
+
+If you used this package before its `1.0` version, you need to read the following documentation: commands name have changed and keybindings have been disabled to make overriding easier.
+
+* * *
+
 ## Keybindings
 
 With the success of Atom, it's really difficult to choose keybindings that will not enter in conflict whit anyone else's packages, so I have removed the default keystrokes and let the keymap empty to let you set your own keybindings.
