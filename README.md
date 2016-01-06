@@ -26,16 +26,16 @@ Use commands `pane-manager:change-layout-[number]` to switch between layouts (`[
 
 Using the following config parameters, you can customize your pane layouts (following are defaults).
 
-* `layoutOne`: `[ 1 ]` (one column, one row)
-* `layoutTwo`: `[ 1, 1 ]` (two columns, one row)
-* `layoutThree`: `[ 1, 1, 1 ]` (three columns, one row)
-* `layoutFour`: `[ 1, 1, 1, 1 ]` (four columns, one row)
-* `layoutFive`: `[ 2, 2 ]` (two columns, two rows)
-* `layoutSix`: `[ 2, 2, 2 ]` (three columns, two rows)
-* `layoutSeven`: `[ 1, 2 ]` (two columns, last one splitted in two rows)
-* `layoutEight`: `[ 1, 2 ]` (two columns, first one splitted in two rows)
-* `layoutNine`: `[ 1, 1, 2 ]` (three columns, last one splitted in two rows)
-* `layoutTen`: `[ 1, 2, 2 ]` (three columns, last two splitted in two rows)
+* `layout-one`: `[ 1 ]` (one column, one row)
+* `layout-two`: `[ 1, 1 ]` (two columns, one row)
+* `layout-three`: `[ 1, 1, 1 ]` (three columns, one row)
+* `layout-four`: `[ 1, 1, 1, 1 ]` (four columns, one row)
+* `layout-five`: `[ 2, 2 ]` (two columns, two rows)
+* `layout-six`: `[ 2, 2, 2 ]` (three columns, two rows)
+* `layout-seven`: `[ 1, 2 ]` (two columns, last one splitted in two rows)
+* `layout-eight`: `[ 1, 2 ]` (two columns, first one splitted in two rows)
+* `layout-nine`: `[ 1, 1, 2 ]` (three columns, last one splitted in two rows)
+* `layout-ten`: `[ 1, 2, 2 ]` (three columns, last two splitted in two rows)
 
 ### Give the focus to another pane
 
