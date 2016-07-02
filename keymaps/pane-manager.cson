@@ -1,7 +1,7 @@
 # With the success of Atom, it's really difficult to choose keybindings that
-# will not enter in conflict whit anyone else's packages, so I let this file
+# will not enter in conflict with anyone else's packages, so I left this file
 # empty to set your own keybindings.
-# For you informations, here's an exemple of my keybindings for pane-manager
+# For your information, here's an exemple of my keybindings for pane-manager
 
 # '.platform-linux atom-workspace, .platform-win32 atom-workspace':
 #   # Layout management
